@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Material Design for Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="static/css/mdb.min.css" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="static/css/admin.css'" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Main Navigation-->
+
+      <!-- Section: Main chart -->
+
+      <!--Section: Sales Performance KPIs-->
+      <section class="mb-4">
+        <div class="card">
+          <div class="card-header text-center py-3">
+            <h5 class="mb-0 text-center">
+              <strong>USER REPORT</strong>
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover text-nowrap">
+                <thead>
+                  <tr>
+                    <!-- <th scope="col"></th> -->
+                    <th scope="col">Product Detail</th>
+                    <th scope="col">Manufacturer Detail</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Product Price</th>
+                    <!-- <th scope="col">Avg. Price</th> -->
+                  </tr>
+                </thead>
+                  {% for p in Collector %}
+                <tbody>
+                  <tr>
+                    <td>{{ p.product_name }}</td>
+                    <td>{{ p.brand_name }}</td>
+                    <td>{{ p.quantity }}</td>
+                    <td>{{ p.price }}</td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+                {% endfor %}
+            </div>
+          </div>
+        </div>
+      </section>
+      
+     
+      <section>
+        <div class="row">
+          <div class="col-xl-6 col-md-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between p-md-1">
+                  <div class="d-flex flex-row">
+                    <div class="align-self-center">
+                      <i class="fas fa-pencil-alt text-info fa-3x me-4"></i>
+                    </div>
+                    <div>
+                      <h4>Total Spends</h4>
+                      <p class="mb-0">Weekly Expenses</p>
+                    </div>
+                  </div>
+                  <div class="align-self-center">
+                    <h2 class="h1 mb-0">18,000</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between p-md-1">
+                  <div class="d-flex flex-row">
+                    <div class="align-self-center">
+                      <i class="far fa-comment-alt text-warning fa-3x me-4"></i>
+                    </div>
+                    <div>
+                      <h4>Total Spends</h4>
+                      <p class="mb-0">Monthly Expenses</p>
+                    </div>
+                  </div>
+                  <div class="align-self-center">
+                    <h2 class="h1 mb-0">84,695</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="col-xl-6 col-md-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between p-md-1">
+                  <div class="d-flex flex-row">
+                    <div class="align-self-center">
+                      <h2 class="h1 mb-0 me-4">$76,456.00</h2>
+                    </div>
+                    <div>
+                      <h4>Total Sales</h4>
+                      <p class="mb-0">Monthly Sales Amount</p>
+                    </div>
+                  </div>
+                  <div class="align-self-center">
+                    <i class="far fa-heart text-danger fa-3x"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between p-md-1">
+                  <div class="d-flex flex-row">
+                    <div class="align-self-center">
+                      <h2 class="h1 mb-0 me-4">$36,000.00</h2>
+                    </div>
+                    <div>
+                      <h4>Total Cost</h4>
+                      <p class="mb-0">Monthly Cost</p>
+                    </div>
+                  </div>
+                  <div class="align-self-center">
+                    <i class="fas fa-wallet text-success fa-3x"></i>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Statistics with subtitles-->
+    </div>
+  </main>
+  <!--Main layout-->
+  <!-- MDB -->
+  <script type="text/javascript" src="static/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="static/js/admin.js"></script>
+
+</body>
+
+</html>

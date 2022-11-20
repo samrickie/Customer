@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %}
+
 {% block title %} login {% endblock title %}
 {% block body %}
 <body id="overview">
@@ -10,19 +11,20 @@
     </div>
     <div id="form-page">
 
-        <form method="post" action={% url 'collector.html' %} class="main">
-            {% csrf_token %}
+        <form method="post" action='' class="main">
+
             <div id="input">
-                <input type="text" name="uname" placeholder="Username" id="fiel">
+                {% csrf_token %}
+                <input type="text" name="uname" placeholder="Username" id="field">
                 <input type="password" placeholder="Password" id="field" name="pwd">
             </div>
             <div id="button">
-                <input type="submit" value="LOGIN" name="login" id="submit" />
+                <input type="submit" value="LOGIN"  id="submit" />
             </div>
         </form>
     </div>
     <div id="linker">
-        <a href="{% url 'register.html' %}">Click here to register</a>
+        <a href="{% url 'register' %}">Click here to register</a>
     </div>
 
 </section>
