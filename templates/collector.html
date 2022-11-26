@@ -3,20 +3,20 @@
 {% block title %} Collector form {% endblock title %}
 {% block body %}
 
-     <link rel="stylesheet" href="{% static 'css/style.css'%}">
+     <link rel="stylesheet" href="{% static 'csss/style.css'%}">
     <header>
         <div id="name">
             <p><span>COLLECTOR</span></p>
         </div>
         <div>
             <ul>
-                <li><a href="{% url 'report' user.pk %}">HOME</a></li>
+                <li><a href="{% url 'home' %}">HOME</a></li>
                 <li><a href="{% url 'collector' %}">FORM</a></li>
             </ul>
         </div>
     </header>
     <section id="collector">
-        <form action='' method="POST" id="sizer">
+        <form action='{% url 'collector' %}' method="POST" id="sizer">
 
                 {% csrf_token %}
             <div>

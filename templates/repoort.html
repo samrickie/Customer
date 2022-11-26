@@ -44,18 +44,20 @@
                     <!-- <th scope="col">Avg. Price</th> -->
                   </tr>
                 </thead>
-                  {% for p in Collector %}
+
                 <tbody>
+                {% for p in object_list %}
                   <tr>
                     <td>{{ p.product_name }}</td>
                     <td>{{ p.brand_name }}</td>
                     <td>{{ p.quantity }}</td>
                     <td>{{ p.price }}</td>
                   </tr>
+                 {% endfor %}
                  
                 </tbody>
               </table>
-                {% endfor %}
+
             </div>
           </div>
         </div>

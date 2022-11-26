@@ -9,9 +9,9 @@
         <P id="initial"><span>To Continue</span> <br></P>
         
     </div>
-    <div id="form-page">
+    <div class="form-control" id="form-page">
 
-        <form method="post" action='' class="main">
+        <form method="" action='{% url 'home' %}' class="main">
 
             <div id="input">
                 {% csrf_token %}

@@ -40,3 +40,9 @@ class Collector(models.Model):
 
     def __str__(self):
         return self.product_name
+
+
+class Post(models.Model):
+    admin = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    image = models.ImageField(upload_to=media(request=media), height_field=None, width_field=None, max_length=None, null=True)
+    Text = models.TextField(max_length=255)

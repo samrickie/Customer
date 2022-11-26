@@ -4,9 +4,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from django.views.generic import DetailView
+from django.views.generic import DetailView, ListView
 
-from clients.models import Userz, Collector
+from .models import Userz, Collector, Post
 
 
 # Create your views here.
@@ -50,9 +50,9 @@ def collector(request):
     return render(request, 'collector.html')
 
 
-class UserDetailsView(DetailView):
+class UserDetailsView(ListView):
     model = Collector
-    template_name = 'admin.html'
+    template_name = 'repoort.html'
 
 
 def login_view(request):
@@ -76,3 +76,8 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     redirect('_login')
+
+
+class Post(ListView):
+    model = Post
+    template_name = 'home.html'

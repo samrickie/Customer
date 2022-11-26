@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% load static %}
+{% include 'navbar.html' %}
+{% block title %}
+report
+{% endblock title %}
+{% block body %}
+<body>
+    <section>
+        <div class="card">
+            <div>
+
+            </div>
+            <div>
+                <H2>
+                </H2>
+    {% for Post in object_list %}
+        <div class="row">
+        <div  class="col">
+            <div class="card" style="width: 18rem;">
+  <img src="{{ Post.image.url }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <small class="card-title">{{ Post.admin.first_name }}</small>
+    <p class="card-text">{{ Post.Text }}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+        </div>
+        </div>
+        <br>
+        <br>
+                {% endfor %}
+            </div>
+            
+        </div>
+    </section>
+</body>
+{% endblock body %}
+</html>

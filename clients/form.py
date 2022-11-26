@@ -4,7 +4,7 @@ from django.forms.models import ModelForm
 from django import forms
 from django.urls import reverse
 
-from clients.models import Users
+from .models import Userz
 
 GENDER_CHOICES = [
     ('M', 'Male'),
@@ -16,7 +16,7 @@ class UserCreateForm(forms.ModelForm):
     gender = forms.ChoiceField(choices=GENDER_CHOICES)
 
     class Meta:
-        model = User
+        model = Userz
         fields = '__all__'
         widgets = {
             'first_name': forms.TextInput(attrs={'value': 'first name'})
